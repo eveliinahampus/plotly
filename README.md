@@ -10,5 +10,5 @@
 - Git
 
 ## Team
-- @Babakfifoo
-- @eveliinahampus
+@Babakfifoo
+@eveliinahampus
