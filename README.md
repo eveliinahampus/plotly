@@ -10,5 +10,5 @@
 - Git
 
 ## Team
-@Babakfifoo
-@eveliinahampus
+- [Babak Firoozi Fooladi](https://github.com/babakfifoo)
+- [Eveliina Hampus](https://github.com/eveliinahampus)
