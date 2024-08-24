@@ -1,26 +1,59 @@
 ---
-title: "FigureFriday by Plotly Week 34"
+title: "FigureFriday  Week 34"
 description: "Week 34"
-author: "BabakFiFoo"
+format: 
+  html:
+    code-fold: true
+execute:
+  echo: false
+code:
+  collapsed: true
 
 ---
 
+## Improvements:
 
+### Trend line improvement:
 
+Trendline needs to have a different color to be shown properly. 
+Making the points smaller makes distribution and their intensity more visible.
 
+```{python collapsed}
 
-
-```{python}
-
+import pandas as pd
 import plotly.express as px
 import plotly.io as pio
+import plotly.graph_objects as go
 pio.renderers.default = "notebook"
-import pandas as pd
 
 
 df = pd.read_csv('https://raw.githubusercontent.com/plotly/Figure-Friday/main/2024/week-34/dataset.csv')
-fig = px.scatter(df, x="energy", y="danceability", facet_col="explicit", trendline='ols',
-                 labels={"explicit": "Has explicit lyrics"})
+
+
+
+fig = px.scatter(
+    df, 
+    x="energy", y="danceability", 
+    facet_row="explicit", 
+    trendline='ols',
+    labels={"explicit": "Has explicit lyrics"},
+    trendline_color_override="red"
+    )
+
+fig.update_traces(marker=dict(size=2))
+
+
 fig.show()
+
+
+
+```
+
+
+
+
+```{python} 
+
+df.iloc[:,5:]
 
 ```
