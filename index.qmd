@@ -1,0 +1,14 @@
+---
+title: "Figure Friday 2024 - week 34"
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  categories: true
+  sort-ui: false
+  filter-ui: false
+page-layout: full
+title-block-banner: true
+---
+
+

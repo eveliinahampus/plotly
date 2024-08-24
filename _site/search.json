@@ -1,0 +1,37 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Figure Friday 2024 - week 34",
+    "section": "",
+    "text": "FigureFriday by Plotly Week 34\n\n\n\n\n\nWeek 34\n\n\n\n\n\nBabakFiFoo\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nformat: dashboard\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/week34/babakfifoo.html",
+    "href": "posts/week34/babakfifoo.html",
+    "title": "Figure Friday 2024 - week 34",
+    "section": "",
+    "text": "title: “Development Indicators by Continent” author: “Gapminder Analytics Group” format: dashboard —"
+  },
+  {
+    "objectID": "posts/Week 34.html",
+    "href": "posts/Week 34.html",
+    "title": "FigureFriday by Plotly Week 34",
+    "section": "",
+    "text": "import plotly.express as px\nimport pandas as pd\n\n\ndf = pd.read_csv('https://raw.githubusercontent.com/plotly/Figure-Friday/main/2024/week-34/dataset.csv')\nfig = px.scatter(df, x=\"energy\", y=\"danceability\", facet_col=\"explicit\", trendline='ols',\n                 labels={\"explicit\": \"Has explicit lyrics\"})\nfig.show()"
+  },
+  {
+    "objectID": "posts/week34/spotify_example.html",
+    "href": "posts/week34/spotify_example.html",
+    "title": "Figure Friday 2024 - week 34",
+    "section": "",
+    "text": "import plotly.express as px\nimport pandas as pd\n\n\ndf = pd.read_csv('https://raw.githubusercontent.com/plotly/Figure-Friday/main/2024/week-34/dataset.csv')\nfig = px.scatter(df, x=\"energy\", y=\"danceability\", facet_col=\"explicit\", trendline='ols',\n                 labels={\"explicit\": \"Has explicit lyrics\"})\nfig.show()\n\nUnable to display output for mime type(s): application/vnd.plotly.v1+json"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this blog"
+  }
+]

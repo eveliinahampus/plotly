@@ -1,0 +1,26 @@
+---
+title: "FigureFriday by Plotly Week 34"
+description: "Week 34"
+author: "BabakFiFoo"
+
+---
+
+
+
+
+
+
+```{python}
+
+import plotly.express as px
+import plotly.io as pio
+pio.renderers.default = "notebook"
+import pandas as pd
+
+
+df = pd.read_csv('https://raw.githubusercontent.com/plotly/Figure-Friday/main/2024/week-34/dataset.csv')
+fig = px.scatter(df, x="energy", y="danceability", facet_col="explicit", trendline='ols',
+                 labels={"explicit": "Has explicit lyrics"})
+fig.show()
+
+```
