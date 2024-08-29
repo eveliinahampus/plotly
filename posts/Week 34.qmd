@@ -22,8 +22,8 @@ Making the points smaller makes distribution and their intensity more visible.
 
 import pandas as pd
 import plotly.express as px
-import plotly.io as pio
 import plotly.graph_objects as go
+import plotly.io as pio
 pio.renderers.default = "notebook"
 
 

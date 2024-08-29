@@ -1,0 +1,87 @@
+---
+title: "#FigureFriday  Week 31"
+description: "Week 31"
+format: 
+  html:
+    code-fold: true
+execute:
+  echo: false
+code:
+  collapsed: true
+
+---
+
+## Improvements:
+
+### Trend line improvement:
+
+Trendline needs to have a different color to be shown properly. 
+Making the points smaller makes distribution and their intensity more visible.
+
+```{python collapsed}
+
+import pandas as pd
+import plotly.express as px
+import plotly.io as pio
+import plotly.graph_objects as go
+import numpy as np
+pio.renderers.default = "notebook"
+
+df = pd.read_csv(
+    "./data/survey_results_public.csv", 
+    encoding='utf-8', 
+    dtype=str
+    )
+
+for col in ['ConvertedCompYearly', 'WorkExp']:
+    df[col] = pd.to_numeric(df[col])
+
+
+```
+
+Let us look at the compensation by age. As always, variables such as income (Annual Compensation) need log transformation to spread properly. Therefore we scale the y-axis by logarithm with base 10. and here is the results:
+
+```{python} 
+
+
+df["log10_ConvertedCompYearly"] = np.log10(df["ConvertedCompYearly"])
+
+# Removing the null ages
+age_hist = df.query("Age != 'Prefer not to say'").loc[:,["Age","log10_ConvertedCompYearly"]].copy()
+
+# Fixing the order of categories here:
+
+sorted_categories = [
+    'Under 18 years old',
+    '18-24 years old',
+    '25-34 years old',
+    '35-44 years old',
+    '45-54 years old',
+    '55-64 years old',
+    '65 years or older'
+    ]
+
+fig = px.box(
+    age_hist, 
+    x="Age", y="log10_ConvertedCompYearly", 
+    labels={
+        'log10_ConvertedCompYearly': 'Annual Compensation (USD)', 
+        }
+    )
+
+lnx = list(range(0,8,1))
+fig.update_layout(
+    yaxis=dict(
+        tickvals=lnx,  # Set the tick values to the X values
+        ticktext=[f'10<sup>{val}</sup>' for val in lnx]  # Format as 10^n
+    )
+)
+fig.update_xaxes(categoryorder='array', categoryarray=sorted_categories)
+fig.update_traces(marker=dict(size=2))
+fig.show()
+
+
+
+```
+
+It appears that the distribution of the income increases until the age of 35, and then the standard deviation decreases.
