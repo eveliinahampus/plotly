@@ -1,0 +1,92 @@
+---
+title: "FigureFriday  Week 34"
+description: "Week 34"
+format: 
+  html:
+    code-fold: true
+execute:
+  echo: false
+code:
+  collapsed: true
+
+---
+
+## Improvements:
+
+### Trend line improvement:
+
+Trendline needs to have a different color to be shown properly. 
+Making the points smaller makes distribution and their intensity more visible.
+
+```{python collapsed}
+
+import pandas as pd
+import plotly.express as px
+import plotly.graph_objects as go
+import plotly.io as pio
+pio.renderers.default = "notebook"
+
+
+df = pd.read_csv('https://raw.githubusercontent.com/plotly/Figure-Friday/main/2024/week-34/dataset.csv')
+
+
+
+fig = px.scatter(
+    df, 
+    x="energy", y="danceability", 
+    facet_row="explicit", 
+    trendline='ols',
+    labels={"explicit": "Has explicit lyrics"},
+    trendline_color_override="red"
+    )
+
+fig.update_traces(marker=dict(size=2))
+
+
+fig.show()
+
+
+
+```
+
+
+
+
+```{python} 
+
+df.iloc[:,5:]
+
+```
+
+
+
+### Other correlations and discoveries:
+
+Box plot reveals outliers in the data, and histogram overview of the distribution.
+
+```{python collapsed}
+fig = px.histogram(df, x="energy", y="danceability", 
+                        marginal="box",
+                        color="explicit",
+                        hover_data=df.columns,
+                        title="Energy and Danceability",
+                        labels={"explicit": "Has explicit lyrics"},
+                        opacity=0.8,
+                        )
+fig.update_layout(
+                  xaxis_title="Energy",
+                  yaxis_title="Sum of Danceability",
+                  bargap=0.5, bargroupgap=0.2)
+
+fig.show()
+
+```
+
+
+### Missing values:
+```{python}
+
+df.isnull().sum()
+
+
+```
