@@ -4,21 +4,7 @@
     "href": "index.html",
     "title": "Figure Friday 2024 - week 34",
     "section": "",
-    "text": "FigureFriday Week 34\n\n\n\n\n\nWeek 34\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigureFriday Week 30\n\n\n\n\n\nWeek 30\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigureFriday Week 31\n\n\n\n\n\nWeek 31\n\n\n\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "posts/Week 31.html",
-    "href": "posts/Week 31.html",
-    "title": "#FigureFriday Week 31",
-    "section": "",
-    "text": "Trendline needs to have a different color to be shown properly. Making the points smaller makes distribution and their intensity more visible.\nLet us look at the compensation by age. As always, variables such as income (Annual Compensation) need log transformation to spread properly. Therefore we scale the y-axis by logarithm with base 10. and here is the results:\n\n\n                                                \n\n\nIt appears that the distribution of the income increases until the age of 35, and then the standard deviation decreases."
-  },
-  {
-    "objectID": "posts/Week 31.html#improvements",
-    "href": "posts/Week 31.html#improvements",
-    "title": "#FigureFriday Week 31",
-    "section": "",
-    "text": "Trendline needs to have a different color to be shown properly. Making the points smaller makes distribution and their intensity more visible.\nLet us look at the compensation by age. As always, variables such as income (Annual Compensation) need log transformation to spread properly. Therefore we scale the y-axis by logarithm with base 10. and here is the results:\n\n\n                                                \n\n\nIt appears that the distribution of the income increases until the age of 35, and then the standard deviation decreases."
+    "text": "FigureFriday Week 30\n\n\n\n\n\nWeek 30\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigureFriday Week 31\n\n\n\n\n\nWeek 31\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigureFriday Week 34\n\n\n\n\n\nWeek 34\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/Week 34.html",
@@ -40,6 +26,20 @@
     "title": "#FigureFriday Week 30",
     "section": "",
     "text": "the Rural agency Investments\nThe Rural Development Agency is part of the Department of Agriculture and it provides loans, grants, and loan guarantees to bring prosperity and opportunity to rural areas. The data set was pulled for 2024.\n\n\n                                                \n\n\nThe distribution of investments is not normal. Therefore the visualisation may not show much difference in regions. Performing a log transofrmation on the data will resolve the issue.\n\n\n                                                \n\n\nNow that \\(\\log(\\text{Investment USD})\\) has normal distribution, we can set the color based on it, and add the real numbers to the hover."
+  },
+  {
+    "objectID": "posts/Week 31.html",
+    "href": "posts/Week 31.html",
+    "title": "#FigureFriday Week 31",
+    "section": "",
+    "text": "Trendline needs to have a different color to be shown properly. Making the points smaller makes distribution and their intensity more visible.\nLet us look at the compensation by age. As always, variables such as income (Annual Compensation) need log transformation to spread properly. Therefore we scale the y-axis by logarithm with base 10. and here is the results:\n\n\n                                                \n\n\nIt appears that the distribution of the income increases until the age of 35, and then the standard deviation decreases."
+  },
+  {
+    "objectID": "posts/Week 31.html#improvements",
+    "href": "posts/Week 31.html#improvements",
+    "title": "#FigureFriday Week 31",
+    "section": "",
+    "text": "Trendline needs to have a different color to be shown properly. Making the points smaller makes distribution and their intensity more visible.\nLet us look at the compensation by age. As always, variables such as income (Annual Compensation) need log transformation to spread properly. Therefore we scale the y-axis by logarithm with base 10. and here is the results:\n\n\n                                                \n\n\nIt appears that the distribution of the income increases until the age of 35, and then the standard deviation decreases."
   },
   {
     "objectID": "about.html",

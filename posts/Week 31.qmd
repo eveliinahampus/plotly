@@ -27,11 +27,7 @@ import plotly.graph_objects as go
 import numpy as np
 pio.renderers.default = "notebook"
 
-df = pd.read_csv(
-    "./data/survey_results_public.csv", 
-    encoding='utf-8', 
-    dtype=str
-    )
+df = pd.read_feather("./data/survey_results_public.ftr")
 
 for col in ['ConvertedCompYearly', 'WorkExp']:
     df[col] = pd.to_numeric(df[col])
