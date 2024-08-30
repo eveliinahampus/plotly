@@ -1,0 +1,41 @@
+---
+title: "#FigureFriday  Week 29"
+description: "Week 29"
+format: 
+  html:
+    code-fold: true
+execute:
+  echo: false
+code:
+  collapsed: true
+---
+
+
+# The changes in tiers
+
+To calculate the share of tier changes, first we need to group by the season, and count the values for each tier change type. However, the count of teams in each season is not equal. We can group the data by season again, and then count the unique team names (Although this is unnecessary since there is one record per team for each season).
+
+Merging these tro data frames allows us to calculate the fractions. 
+Plotting the results in a stacked barplot format presents the changes in tiers after each season.
+
+```{python collapsed}
+import pandas as pd
+import plotly.express as px
+import plotly.graph_objects as go
+import plotly.io as pio
+pd.options.mode.chained_assignment = None  # default='warn'
+pio.renderers.default = "notebook"
+
+
+df = pd.read_csv('https://raw.githubusercontent.com/plotly/Figure-Friday/main/2024/week-29/ewf_standings.csv')
+
+changes_df = df.groupby("season").season_outcome.value_counts().reset_index()
+team_counts =  df.groupby("season").agg({"team_name":"nunique"}).reset_index()
+change_rates = changes_df.merge(team_counts, on="season")
+change_rates["share"] = (change_rates["count"] / change_rates["team_name"])
+
+
+fig = px.bar(change_rates, x="season", y="share", color="season_outcome")
+fig.show()
+
+```
