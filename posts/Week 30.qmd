@@ -77,16 +77,16 @@ The distribution of investments is not normal. Therefore the visualisation may n
 from plotly.subplots import make_subplots
 import plotly.graph_objects as go
 
-lnx = list(range(8,20,1))
+lnx = list(range(1,9,1))
 
 fig = make_subplots(rows=1, cols=2)
 fig.add_trace(
     go.Histogram(
         x=invdata_grouped["log10_inv_USD"], 
-        name= "Log Investment Dollars",
+        name= "Log<sub>10</sub> Investment Dollars",
         xbins=dict( # bins used for histogram
-            start=7,
-            end=18,
+            start=2,
+            end=9,
             size=0.2
             )
         ), 
@@ -99,13 +99,13 @@ fig.update_layout(
         tickvals=lnx,  # Set the tick values to the X values
         ticktext=[f'10<sup>{val}</sup>' for val in lnx]  # Format as 10^n
     ),
-    title='Investment ($)',
-    xaxis_title='Log(Investment USD)'
+    xaxis_title='Log<sub>10</sub> (Investment USD)'
 )
 
 fig.add_trace(
     go.Histogram(x=invdata_grouped["inv_USD"], name= "Investment Dollars"), 
-    row=1, col=2
+    row=1, col=2,
+
     )
 
 fig.update_layout(
@@ -117,6 +117,12 @@ fig.update_layout(
         x=0.5
     )
 )
+
+fig.update_xaxes(    
+    title_text='Investment USD',
+    col=2,
+    row=1
+    )
 
 fig.show()
 

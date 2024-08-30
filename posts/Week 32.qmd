@@ -1,0 +1,12 @@
+---
+title: "#FigureFriday  Week 31"
+description: "Week 31"
+format: 
+  html:
+    code-fold: true
+execute:
+  echo: false
+code:
+  collapsed: true
+
+---
