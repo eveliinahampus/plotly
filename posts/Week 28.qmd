@@ -1,0 +1,68 @@
+---
+title: "#FigureFriday  Week 28"
+description: "Week 28"
+format: 
+  html:
+    code-fold: true
+execute:
+  echo: false
+code:
+  collapsed: true
+---
+
+```{python collapsed}
+
+import pandas as pd
+import plotly.express as px
+import plotly.graph_objects as go
+import plotly.io as pio
+pd.options.mode.chained_assignment = None  # default='warn'
+pio.renderers.default = "notebook"
+
+
+# Load the data from the Excel file
+df = pd.read_feather('data/week 28 - Sample - Superstore.ftr')
+
+```
+
+# Workout-Wednesday data
+
+Here we group the data by category and the order date. Then calculating the commulative sum to see how the balance changes over time. We can see that the sales of three categories is roughly the same, but their quantity and profit margin is different. 
+
+
+```{python collapsed}
+
+ts_data = (df
+    .groupby(["Category", "Order Date"])
+    .agg({
+        "Profit": "sum",
+        "Quantity": "sum",
+        "Sales": "sum"
+    })
+    .reset_index()
+    .sort_values(["Category", "Order Date"])
+)
+
+for col in ["Profit", "Quantity", "Sales"]:
+    ts_data["cs_" + col] = ts_data.groupby("Category")[col].cumsum()
+
+ts_data = (
+    ts_data[["Category", "Order Date", "cs_Profit", "cs_Quantity", "cs_Sales"]]
+    .melt(["Order Date","Category"])
+    )
+
+fig = px.line(ts_data, x="Order Date", y="value", color="Category", facet_col="variable")
+fig.update_yaxes(
+    matches=None,
+    )
+fig.for_each_annotation(lambda a: a.update(text=a.text.split("_")[-1]))
+
+fig.update_layout(yaxis=dict(title=None))
+
+# removing Y-axis labels
+fig.for_each_yaxis(lambda yaxis: yaxis.update(title=None))
+fig.for_each_xaxis(lambda xaxis: xaxis.update(title=None))
+
+fig.show()
+```
+
