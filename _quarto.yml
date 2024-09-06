@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "Figure Friday 2024 - week 34"
+  title: "Figure Friday 2024"
   navbar:
     right:
       - about.qmd
