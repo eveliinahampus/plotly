@@ -1,10 +1,38 @@
 [
   {
+    "objectID": "posts/Week-30.html",
+    "href": "posts/Week-30.html",
+    "title": "#FigureFriday Week 30",
+    "section": "",
+    "text": "the Rural agency Investments\nThe Rural Development Agency is part of the Department of Agriculture and it provides loans, grants, and loan guarantees to bring prosperity and opportunity to rural areas. The data set was pulled for 2024.\n\n\n                                                \n\n\nThe distribution of investments is not normal. Therefore the visualisation may not show much difference in regions. Performing a log transofrmation on the data will resolve the issue.\n\n\n                                                \n\n\nNow that \\(\\log(\\text{Investment USD})\\) has normal distribution, we can set the color based on it, and add the real numbers to the hover."
+  },
+  {
+    "objectID": "posts/Week-28.html",
+    "href": "posts/Week-28.html",
+    "title": "#FigureFriday Week 28",
+    "section": "",
+    "text": "Workout-Wednesday data\nHere we group the data by category and the order date. Then calculating the commulative sum to see how the balance changes over time. We can see that the sales of three categories is roughly the same, but their quantity and profit margin is different."
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Figure Friday 2024 - week 34",
     "section": "",
-    "text": "FigureFriday Week 31\n\n\n\n\n\nWeek 31\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigureFriday Week 28\n\n\n\n\n\nWeek 28\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigureFriday Week 31\n\n\n\n\n\nWeek 31\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigureFriday Week 29\n\n\n\n\n\nWeek 29\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigureFriday Week 30\n\n\n\n\n\nWeek 30\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigureFriday Week 34\n\n\n\n\n\nWeek 34\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "FigureFriday Week 29\n\n\n\n\n\nWeek 29\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigureFriday Week 31\n\n\n\n\n\nWeek 31\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigureFriday Week 34\n\n\n\n\n\nWeek 34\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigureFriday Week 28\n\n\n\n\n\nWeek 28\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigureFriday Week 31\n\n\n\n\n\nWeek 31\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigureFriday Week 30\n\n\n\n\n\nWeek 30\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this blog"
+  },
+  {
+    "objectID": "posts/Week-29.html",
+    "href": "posts/Week-29.html",
+    "title": "#FigureFriday Week 29",
+    "section": "",
+    "text": "The changes in tiers\nTo calculate the share of tier changes, first we need to group by the season, and count the values for each tier change type. However, the count of teams in each season is not equal. We can group the data by season again, and then count the unique team names (Although this is unnecessary since there is one record per team for each season).\nMerging these tro data frames allows us to calculate the fractions. Plotting the results in a stacked barplot format presents the changes in tiers after each season."
   },
   {
     "objectID": "posts/Week-34.html",
@@ -21,20 +49,6 @@
     "text": "Trendline needs to have a different color to be shown properly. Making the points smaller makes distribution and their intensity more visible.\n\n\n                                                \n\n\n\n\n\n\n\n\n\n\n\npopularity\nduration_ms\nexplicit\ndanceability\nenergy\nkey\nloudness\nmode\nspeechiness\nacousticness\ninstrumentalness\nliveness\nvalence\ntempo\ntime_signature\ntrack_genre\n\n\n\n\n0\n73\n230666\nFalse\n0.676\n0.4610\n1\n-6.746\n0\n0.1430\n0.0322\n0.000001\n0.3580\n0.7150\n87.917\n4\nacoustic\n\n\n1\n55\n149610\nFalse\n0.420\n0.1660\n1\n-17.235\n1\n0.0763\n0.9240\n0.000006\n0.1010\n0.2670\n77.489\n4\nacoustic\n\n\n2\n57\n210826\nFalse\n0.438\n0.3590\n0\n-9.734\n1\n0.0557\n0.2100\n0.000000\n0.1170\n0.1200\n76.332\n4\nacoustic\n\n\n3\n71\n201933\nFalse\n0.266\n0.0596\n0\n-18.515\n1\n0.0363\n0.9050\n0.000071\n0.1320\n0.1430\n181.740\n3\nacoustic\n\n\n4\n82\n198853\nFalse\n0.618\n0.4430\n2\n-9.681\n1\n0.0526\n0.4690\n0.000000\n0.0829\n0.1670\n119.949\n4\nacoustic\n\n\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n\n\n113995\n21\n384999\nFalse\n0.172\n0.2350\n5\n-16.393\n1\n0.0422\n0.6400\n0.928000\n0.0863\n0.0339\n125.995\n5\nworld-music\n\n\n113996\n22\n385000\nFalse\n0.174\n0.1170\n0\n-18.318\n0\n0.0401\n0.9940\n0.976000\n0.1050\n0.0350\n85.239\n4\nworld-music\n\n\n113997\n22\n271466\nFalse\n0.629\n0.3290\n0\n-10.895\n0\n0.0420\n0.8670\n0.000000\n0.0839\n0.7430\n132.378\n4\nworld-music\n\n\n113998\n41\n283893\nFalse\n0.587\n0.5060\n7\n-10.889\n1\n0.0297\n0.3810\n0.000000\n0.2700\n0.4130\n135.960\n4\nworld-music\n\n\n113999\n22\n241826\nFalse\n0.526\n0.4870\n1\n-10.204\n0\n0.0725\n0.6810\n0.000000\n0.0893\n0.7080\n79.198\n4\nworld-music\n\n\n\n\n114000 rows × 16 columns\n\n\n\n\n\n\nBox plot reveals outliers in the data, and histogram overview of the distribution.\n\n\n                                                \n\n\n\n\n\n\n\nUnnamed: 0          0\ntrack_id            0\nartists             1\nalbum_name          1\ntrack_name          1\npopularity          0\nduration_ms         0\nexplicit            0\ndanceability        0\nenergy              0\nkey                 0\nloudness            0\nmode                0\nspeechiness         0\nacousticness        0\ninstrumentalness    0\nliveness            0\nvalence             0\ntempo               0\ntime_signature      0\ntrack_genre         0\ndtype: int64"
   },
   {
-    "objectID": "posts/Week-29.html",
-    "href": "posts/Week-29.html",
-    "title": "#FigureFriday Week 29",
-    "section": "",
-    "text": "The changes in tiers\nTo calculate the share of tier changes, first we need to group by the season, and count the values for each tier change type. However, the count of teams in each season is not equal. We can group the data by season again, and then count the unique team names (Although this is unnecessary since there is one record per team for each season).\nMerging these tro data frames allows us to calculate the fractions. Plotting the results in a stacked barplot format presents the changes in tiers after each season."
-  },
-  {
-    "objectID": "posts/Week-28.html",
-    "href": "posts/Week-28.html",
-    "title": "#FigureFriday Week 28",
-    "section": "",
-    "text": "Workout-Wednesday data\nHere we group the data by category and the order date. Then calculating the commulative sum to see how the balance changes over time. We can see that the sales of three categories is roughly the same, but their quantity and profit margin is different."
-  },
-  {
     "objectID": "posts/Week-31.html",
     "href": "posts/Week-31.html",
     "title": "#FigureFriday Week 31",
@@ -47,19 +61,5 @@
     "title": "#FigureFriday Week 31",
     "section": "",
     "text": "Trendline needs to have a different color to be shown properly. Making the points smaller makes distribution and their intensity more visible.\nLet us look at the compensation by age. As always, variables such as income (Annual Compensation) need log transformation to spread properly. Therefore we scale the y-axis by logarithm with base 10. and here is the results:\n\n\n                                                \n\n\nIt appears that the distribution of the income increases until the age of 35, and then the standard deviation decreases."
-  },
-  {
-    "objectID": "posts/Week-30.html",
-    "href": "posts/Week-30.html",
-    "title": "#FigureFriday Week 30",
-    "section": "",
-    "text": "the Rural agency Investments\nThe Rural Development Agency is part of the Department of Agriculture and it provides loans, grants, and loan guarantees to bring prosperity and opportunity to rural areas. The data set was pulled for 2024.\n\n\n                                                \n\n\nThe distribution of investments is not normal. Therefore the visualisation may not show much difference in regions. Performing a log transofrmation on the data will resolve the issue.\n\n\n                                                \n\n\nNow that \\(\\log(\\text{Investment USD})\\) has normal distribution, we can set the color based on it, and add the real numbers to the hover."
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this blog"
   }
 ]
